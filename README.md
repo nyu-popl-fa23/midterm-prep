@@ -67,12 +67,12 @@ The problems below are similar to what you can expect for the midterm exam.
       
    b. 
       ```javascript
-      const f = (function (x) (const y = x; y)); f(x)
+      const f = (x => (const y = x; y)); f(x)
       ```
       
    c. 
       ```javascript
-      function (x) ((function (x) (x(y)))(x))
+      x => (x => (x(y)))(x))
       ```
 
    You can also mark defining occurrences with ^
