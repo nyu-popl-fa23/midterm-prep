@@ -48,14 +48,13 @@ The problems below are similar to what you can expect for the midterm exam.
    <p>
       
    ```scala
-   def take(n: Int, l: List): List = {
+   def take(n: Int, l: List): List =
      require(n >= 0)
-     def takeLoop(n: Int, l: List, acc: List): List = l match {
-       case Cons(hd, tl) if n > 0 => takeLoop(n - 1, tl, Cons(hd, acc))
+     def takeLoop(n: Int, l: List, acc: List): List = l match
+       case Cons(hd, tl) if n > 0 => 
+         takeLoop(n - 1, tl, Cons(hd, acc))
        case _ => acc
-     }
      reverse(takeLoop(n, l, Nil))
-   }
    ```
    Here, `reverse` is the function that reverses the given list.
    </p>
